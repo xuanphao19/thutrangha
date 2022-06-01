@@ -1,16 +1,27 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Folowing from './pages/Folowing';
-import Contact from './pages/Contact';
+import { publicRoutes } from '@/Routes';
+import { DefaultLayout } from '@/components/Layout';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/folowing" element={<Folowing />} />
-          <Route path="/contact" element={<Contact />} />
+          {publicRoutes.map((route, index) => {
+            const Layout = route.layout || DefaultLayout;
+            const Page = route.component;
+            return (
+              <Route
+                key={index}
+                path={route.path}
+                element={
+                  <Layout>
+                    <Page />
+                  </Layout>
+                }
+              />
+            );
+          })}
         </Routes>
       </div>
     </Router>
