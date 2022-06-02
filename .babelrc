@@ -4,8 +4,7 @@
       "module-resolver",
       {
         "alias": {
-          "@": "./src",
-          "test": "./test"
+          "@": "./src"
         }
       }
     ]
