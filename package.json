@@ -1,5 +1,4 @@
 {
-  "homepage": "https://xuanphao19.github.io/thutrangha/",
   "name": "thutrangha",
   "version": "0.1.0",
   "private": true,
@@ -7,6 +6,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.27.2",
     "normalize.css": "^8.0.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -23,12 +23,10 @@
     "sass": "^1.52.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-app-rewired eject",
-    "deploy": "gh-pages -d build"
+    "eject": "react-app-rewired eject"
   },
   "eslintConfig": {
     "extends": "react-app"
